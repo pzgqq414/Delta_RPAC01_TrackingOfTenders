@@ -1,3 +1,0 @@
-Sub Main()
-Sheets("Sheet1").Cells.Clear
-End Sub
