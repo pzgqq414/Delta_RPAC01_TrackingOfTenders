@@ -93,11 +93,7 @@
       <Variable x:TypeArguments="x:String" Name="selectedFolder" />
       <Variable x:TypeArguments="si:FileInfo" Name="file" />
       <Variable x:TypeArguments="x:String" Name="filename" />
-      <Variable x:TypeArguments="x:String" Name="firefoxDownloadedPath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">N:\Temp1\</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="N:\Temp1\" Name="firefoxDownloadedPath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -690,7 +686,7 @@
                             </ui:Click.Target>
                           </ui:Click>
                           <Delay Duration="[TimeSpan.FromMilliseconds(3000)]" sap:VirtualizedContainerService.HintSize="726,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,750" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Directory.GetFiles(&quot;N:\Temp1&quot;)]">
+                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,750" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Directory.GetFiles(firefoxDownloadedPath)]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:String">
                                 <ActivityAction.Argument>
